@@ -3,9 +3,8 @@
 int main (int argc, char *argv[])
 {
 	char c;
-	int i = -1;
-	char prev_c = 'a';
-
+	int i = 0;
+	
 	if (argc < 2)
 	{
 		printf("Provide a file to compress");
@@ -21,20 +20,8 @@ int main (int argc, char *argv[])
 
 	while ((c = fgetc(raw_file)) != EOF)
 	{
-		if (prev_c == 'a')
-		{
-			prev_c = c;
-		}
-		if(c != prev_c)
-		{
-			printf("%d%c", i+1, prev_c);
-			printf("CHAR: %c", c);
-			i = 0;
-		}else
-		{
-			i++;
-		}
-		prev_c = c;
+		putchar(c);
+		i++;
 	}
 
 	fclose(raw_file);
