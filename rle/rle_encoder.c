@@ -28,7 +28,6 @@ int main (int argc, char *argv[])
 		if(c != prev_c)
 		{
 			printf("%d%c", i+1, prev_c);
-			printf("CHAR: %c", c);
 			i = 0;
 		}else
 		{
