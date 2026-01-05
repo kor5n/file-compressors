@@ -35,7 +35,7 @@ int main (int argc, char *argv[])
 		}
 		prev_c = c;
 	}
-
+	printf("%d%c", i+1, prev_c);
 	fclose(raw_file);
 	return 0;
 }
